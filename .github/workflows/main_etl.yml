@@ -1,0 +1,26 @@
+name: Ejecutar ETL mensual
+
+on:
+  schedule:
+    - cron: '0 22 30 * *' # Se ejecuta el día 30 de cada mes a las 11:00 UTC
+  workflow_dispatch:      # Permite ejecutar el pipeline manualmente si lo necesitas
+
+jobs:
+  ejecutar-etl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14' # Cambia esto a tu versión de Python
+
+      - name: Instalar dependencias
+        run: |
+          python3 -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Ejecutar script ETL
+        run: python3 src/etl.py
