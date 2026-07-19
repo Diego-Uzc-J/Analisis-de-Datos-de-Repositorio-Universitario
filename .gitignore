@@ -1,0 +1,31 @@
+# ==========================================
+# Archivos de Ejecución de Python (Byte-code)
+# ==========================================
+.pytest_cache
+src/__pycache__
+tests/__pycache__
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# Entornos Virtuales (Virtual Environments)
+# ==========================================
+venv/
+.venv/
+
+# ==========================================
+# ETL pipeline output file
+# ==========================================
+#articulos_procesados.parquet
+
+# ==========================================
+# Build Outputs & Logs
+# ==========================================
+logs/
+*.log
+
+# General Editor backups
+*.swp
+*~
+.bak
