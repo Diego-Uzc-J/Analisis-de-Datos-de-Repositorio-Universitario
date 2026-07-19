@@ -8,6 +8,13 @@ El sistema convierte registros académicos en métricas institucionales clave, f
 
 ---
 
+## 🚀 Despliegue en Vivo
+Interactúa con el dashboard directamente en la nube:
+
+👉 **App en [dashboard-repositorio-universitario.streamlit.app](https://dashboard-repositorio-universitario.streamlit.app/)**
+
+---
+
 ## 🛠️ Stack Tecnológico
 
 * **Lenguaje**: Python 3.x
